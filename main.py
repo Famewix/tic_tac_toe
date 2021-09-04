@@ -2,17 +2,15 @@
 # https://github.com/Famewix
 # date: 26.12.2020
 
-import time
-
 
 def display(board):
-    print(board[6] + '|' + board[7] + '|' + board[8])
-    print(board[3] + '|' + board[4] + '|' + board[5])
     print(board[0] + '|' + board[1] + '|' + board[2])
+    print(board[3] + '|' + board[4] + '|' + board[5])
+    print(board[6] + '|' + board[7] + '|' + board[8])
 
 
 # Global vars
-brd = list('---------')
+brd = list('-'*9)
 
 
 def char_choice():
@@ -76,7 +74,6 @@ def win_lose():
 
     y = 'Player1'
     z = 'Player2'
-    print("!!Num Pad formation!!")
     while res == False:
 
         player_one() # func call
@@ -97,7 +94,6 @@ def win_lose():
             print("It's a TIE...")
             break
 
-        time.sleep(0.5)
 
         player_two() # func call
 
